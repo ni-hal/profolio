@@ -23,8 +23,11 @@ import threejs from "./tech/threejs.svg";
 
 import oghub from "./og hub.png";
 import sunrise from "./sunrise.png";
-
 import codeox from "./codeox.png";
+
+import instagram from "./instagram (1).png";
+import linkedin from "./linkedin.png";
+import githubs from "./githubs.png";
 
 
 export {
@@ -51,8 +54,10 @@ export {
   threejs,
 oghub,
 sunrise,
-codeox
-
+codeox,
+linkedin,
+instagram ,
+githubs
  
  
 

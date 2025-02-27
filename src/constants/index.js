@@ -1,7 +1,7 @@
 import {
   mobile,
   backend,
-  creator,
+ 
   web,
   javascript,
   html,
@@ -16,7 +16,10 @@ import {
   threejs,
 sunrise,
   oghub, 
-  codeox 
+  codeox,
+  linkedin,
+  instagram ,
+  githubs 
 } from "../assets";
 
 export const navLinks = [
@@ -256,4 +259,22 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const socials = [
+  {
+    name: "github",
+    link: "https://github.com/ni-hal",
+    icon: githubs,
+  },  
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/in/nihal-puliyakkady/",
+    icon: linkedin,
+  },
+
+  {
+    name: "instagram",
+    link: "https://www.instagram.com/nihal_digital_",
+    icon:   instagram,
+  },
+]
+export { services, technologies, experiences, testimonials, projects,socials };

@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { socials } from '../constants'
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,6 +17,8 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+
+
 
   const handleChange = (e) => {
     const { target } = e;
@@ -37,9 +40,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Nihal Puliyakkady",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "nihalpuliyakkady@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -120,7 +123,31 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+        <div className="flex flex-col items-start gap-2 mt-3">
+
+  <span className="text-white mr-2">Follow me on:</span>
+  
+ 
+  <div className="flex items-center gap-4 mt-4">
+    {socials.map((social, index) => (
+      <a key={index} href={social.link} target="_blank" rel="noopener noreferrer">
+        <img
+          src={social.icon}
+          alt={social.name}
+          className="w-[24px] h-[24px] object-contain"
+        />
+      </a>
+    ))}
+  </div>
+</div>
+
+
+
+
+
       </motion.div>
+
+
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
